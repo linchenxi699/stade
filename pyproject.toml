@@ -1,0 +1,73 @@
+[build-system]
+requires = ["setuptools>=64", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "stade"
+version = "0.1.0"
+description = "StaDE: stability-aware differential expression and functional enrichment for public transcriptomes"
+readme = "README.md"
+requires-python = ">=3.10"
+license = { file = "LICENSE" }
+authors = [{ name = "Lin Chenxi" }]
+keywords = [
+  "bioinformatics",
+  "transcriptomics",
+  "differential expression",
+  "empirical Bayes",
+  "gene set enrichment",
+  "reproducibility",
+  "stability",
+]
+classifiers = [
+  "Development Status :: 4 - Beta",
+  "Intended Audience :: Science/Research",
+  "License :: OSI Approved :: MIT License",
+  "Operating System :: OS Independent",
+  "Programming Language :: Python :: 3",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Programming Language :: Python :: 3.13",
+  "Topic :: Scientific/Engineering :: Bio-Informatics",
+]
+dependencies = [
+  "numpy>=1.24",
+  "pandas>=2.0",
+  "scipy>=1.10",
+  "matplotlib>=3.7",
+  "statsmodels>=0.14",
+  "lifelines>=0.27",
+]
+
+[project.optional-dependencies]
+docx = ["python-docx>=1.0"]
+dev = ["pytest>=8", "pytest-cov>=5", "python-docx>=1.0"]
+
+[project.scripts]
+stade = "stade.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/your-account/stade"
+Documentation = "https://github.com/your-account/stade/tree/main/docs"
+Repository = "https://github.com/your-account/stade"
+Issues = "https://github.com/your-account/stade/issues"
+Changelog = "https://github.com/your-account/stade/blob/main/CHANGELOG.md"
+
+[tool.setuptools.packages.find]
+include = ["stade*"]
+
+[tool.setuptools.package-data]
+stade = ["py.typed"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-q"
+
+[tool.coverage.run]
+source = ["stade"]
+omit = ["*/cli.py"]
+
+[tool.ruff]
+line-length = 130
+target-version = "py310"

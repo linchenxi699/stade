@@ -1,0 +1,24 @@
+cff-version: 1.2.0
+message: "If you use StaDE in your research, please cite it as below."
+title: "StaDE: stability-aware differential expression and functional enrichment for public transcriptomes"
+abstract: >-
+  StaDE quantifies the reproducibility of differential-expression calls with a
+  stratified bootstrap stability score and propagates that score into
+  over-representation analysis, GSEA and gene-set selection frequency, so that
+  enrichment conclusions require both statistical significance and replicability.
+authors:
+  - family-names: Lin
+    given-names: Chenxi
+version: 0.1.0
+date-released: "2026-12-15"
+license: MIT
+type: software
+keywords:
+  - transcriptomics
+  - differential expression
+  - empirical Bayes
+  - stability analysis
+  - gene set enrichment
+  - reproducibility
+  - hepatocellular carcinoma
+repository-code: "https://github.com/your-account/stade"

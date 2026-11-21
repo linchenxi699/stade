@@ -1,0 +1,12 @@
+# runtime dependencies (see pyproject.toml for the authoritative list)
+numpy>=1.24
+pandas>=2.0
+scipy>=1.10
+matplotlib>=3.7
+statsmodels>=0.14
+lifelines>=0.27
+# optional: required only for scripts/05_build_paper.py
+python-docx>=1.0
+# development
+pytest>=8
+pytest-cov>=5
